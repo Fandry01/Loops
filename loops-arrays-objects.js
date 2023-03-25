@@ -9,13 +9,17 @@ const scores = [
     {name: 'Rianne', score: 66, grade: null}
 ];
 
+
+
 // Verwachtte uitkomsten:
 // 83
 // 77
 // 92
 // 66ç
 // ==========================================
-
+for(let i = 0; i < scores.length; i++){
+    console.log(scores[i].score);
+}
 
 
 
@@ -31,7 +35,23 @@ const scores = [
 // A
 // D
 // ==========================================
-
+for(let i = 0; i <scores.length; i++){
+    if(scores[i].score < 60){
+        console.log("F");
+    }
+    else if(scores[i].score > 60 && scores[i].score  < 70){
+        console.log("D");
+    }
+    else if(scores[i].score > 70 && scores[i].score < 80){
+        console.log("C");
+    }
+    else if(scores[i].score> 80 && scores[i].score < 90){
+        console.log("B");
+    }
+    else if(scores[i].score> 90 && scores[i].score < 100){
+        console.log("A");
+    }
+}
 
 
 
@@ -48,8 +68,25 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
+for(let i = 0; i <scores.length; i++){
+    if(scores[i].score < 60){
+        scores[i].grade = 'F';
+    }
+    else if(scores[i].score > 60 && scores[i].score  < 70){
+        scores[i].grade = 'D';
+    }
+    else if(scores[i].score > 70 && scores[i].score < 80){
+        scores[i].grade = 'C';
+    }
+    else if(scores[i].score> 80 && scores[i].score < 90){
+        scores[i].grade = 'B';
+    }
+    else if(scores[i].score> 90 && scores[i].score < 100){
+        scores[i].grade = 'A';
+    }
+}
 
-
+console.log(scores);
 
 
 
@@ -75,7 +112,10 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
-
+for(let i = 0; i < NOVIEmployees.length; i++){
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName+"."+NOVIEmployees[i].lastName +"@novi.nl";
+}
+console.log(NOVIEmployees);
 
 
 
@@ -131,5 +171,29 @@ const students = [
 // ]
 // ==========================================
 
+for(let i = 0; i < students.length; i++){
+    if(students[i].zipCode === '3513'){
+        students[i].neighborhood = "Pijlsweerd";
+    }
+    else if(students[i].zipCode === '3514'){
+        students[i].neighborhood = "Vogelenbuurt";
+    }
+    else if(students[i].zipCode === '3512'){
+        students[i].neighborhood = "Binnenstad";
+    }
+    else if(students[i].zipCode === '3531'){
+        students[i].neighborhood = "Lombok";
+    }
+    else if(students[i].zipCode === '3572'){
+        students[i].neighborhood = "Wittevrouwen";
+    }
+    else if(students[i].zipCode === '3581'){
+        students[i].neighborhood = "Oudwijk";
+    }
+    else if(students[i].zipCode === '3583') {
+        students[i].neighborhood = "Schildersbuurt";
+    }
+}
+console.log(students);
 
 
